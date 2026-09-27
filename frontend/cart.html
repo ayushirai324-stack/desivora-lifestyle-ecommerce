@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Shopping Bag — DesiVora Living</title>
+  <meta name="description" content="Review your selected everyday goods and prepare for conscious, carbon-neutral delivery." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-strip">
+    <div class="container">
+      <div>Complimentary Carbon-Neutral Shipping on Orders Over ₹2,999 &bull; Code: <strong>DESIVORA10</strong></div>
+      <div class="top-strip-links">
+        <a href="about.html">Our Craft</a>
+        <a href="contact.html">Concierge Support</a>
+        <span style="color: #9DA399;">INR (₹)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">DesiVora</span>
+        <span class="brand-tagline">Living &bull; Studio</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle-btn" aria-label="Search Catalog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count wishlist-badge" style="display: none;">0</span>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </a>
+        <a href="login.html" class="icon-btn header-account-link" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <button class="hamburger-btn" aria-label="Open Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Cart Section -->
+  <main class="section" style="padding-top: 2.5rem;">
+    <div class="container">
+      
+      <div style="margin-bottom: 2rem;">
+        <h1 style="font-size: clamp(2rem, 3.2vw, 2.75rem); margin-bottom: 0.5rem;">Your Shopping Bag</h1>
+        <p style="color: var(--text-muted);" id="cart-item-count-text">Review your selected items</p>
+      </div>
+
+      <!-- Main Cart Content Container -->
+      <div id="cart-content-wrapper">
+        <!-- Rendered via JavaScript: Either cart table + summary, or empty state -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none;">
+        <div>&copy; 2026 DesiVora Living &amp; Studio Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="shop.html">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div id="search-modal" style="position: fixed; inset: 0; background: rgba(23, 26, 23, 0.7); backdrop-filter: blur(8px); z-index: 2000; display: none; align-items: flex-start; justify-content: center; padding: 3rem 1rem;">
+    <div style="background: #FFFFFF; width: 100%; max-width: 680px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border-light);">
+      <div style="display: flex; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-light); gap: 1rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" placeholder="Search curated goods..." style="width: 100%; border: none; outline: none; font-size: 1.1rem; color: var(--text-main);" />
+        <button id="search-modal-close" style="color: var(--text-muted);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+      </div>
+      <div id="search-modal-results" style="padding: 1.5rem; max-height: 480px; overflow-y: auto;"></div>
+    </div>
+  </div>
+
+  <style>
+    #search-modal.active { display: flex !important; }
+  </style>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { getCart, removeFromCart, updateCartQuantity, getCartSummary, applyPromoCode, removePromoCode } from './js/cart.js';
+    import { formatPrice, showToast } from './js/ui.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPage();
+
+      function renderCartPage() {
+        const wrapper = document.getElementById('cart-content-wrapper');
+        const countText = document.getElementById('cart-item-count-text');
+        const cart = getCart();
+        const summary = getCartSummary();
+
+        countText.textContent = `${summary.itemCount} ${summary.itemCount === 1 ? 'item' : 'items'} in your bag`;
+
+        if (cart.length === 0) {
+          wrapper.innerHTML = `
+            <div class="empty-state" style="padding: 5rem 2rem;">
+              <div class="empty-icon" style="width: 72px; height: 72px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <h2 style="font-size: 1.6rem; margin-bottom: 0.75rem;">Your shopping bag is currently empty</h2>
+              <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto;">
+                Explore our catalog of acoustic electronics, organic knitwear, and handmade ceramics to begin your collection.
+              </p>
+              <a href="shop.html" class="btn btn-primary btn-lg">Explore All Goods</a>
+            </div>
+          `;
+          return;
+        }
+
+        // Free Shipping Progress
+        const progressPercent = Math.min(100, (summary.subtotal / summary.freeShippingThreshold) * 100);
+        const freeShippingMessage = summary.subtotal >= summary.freeShippingThreshold
+          ? `🎉 You've unlocked <strong>Complimentary Carbon-Neutral Delivery</strong>!`
+          : `Add <strong>${formatPrice(summary.amountForFreeShipping)}</strong> more to unlock Free Carbon-Neutral Shipping!`;
+
+        wrapper.innerHTML = `
+          <!-- Free shipping bar -->
+          <div style="background-color: var(--bg-soft-green); border: 1px solid var(--accent-light); padding: 1.25rem 1.75rem; border-radius: var(--radius-md); margin-bottom: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.95rem;">
+              <span>${freeShippingMessage}</span>
+              <span style="font-weight: 700; color: var(--accent-primary);">${Math.round(progressPercent)}%</span>
+            </div>
+            <div style="background-color: #D6E0CE; height: 6px; border-radius: 99px; overflow: hidden;">
+              <div style="background-color: var(--accent-primary); width: ${progressPercent}%; height: 100%; transition: width 0.3s ease;"></div>
+            </div>
+          </div>
+
+          <!-- 2-Column Cart Grid -->
+          <div style="display: grid; grid-template-columns: 1.7fr 1fr; gap: 3rem; align-items: start;" class="cart-grid">
+            
+            <!-- Items Table/List -->
+            <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden;">
+              <div style="padding: 1.25rem 1.5rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-light); display: grid; grid-template-columns: 2.5fr 1fr 1fr; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted);">
+                <span>Product</span>
+                <span style="text-align: center;">Quantity</span>
+                <span style="text-align: right;">Total</span>
+              </div>
+
+              <div style="padding: 1rem 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                ${cart.map((item, idx) => `
+                  <div style="display: grid; grid-template-columns: 2.5fr 1fr 1fr; gap: 1rem; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-light);">
+                    <div style="display: flex; gap: 1.25rem; align-items: center;">
+                      <img src="${item.image}" alt="${item.name}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-light); background: #F6F6F0;" />
+                      <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">
+                          <a href="product.html?slug=${item.slug}">${item.name}</a>
+                        </h4>
+                        ${item.selectedColor ? `<div style="font-size: 0.8rem; color: var(--text-muted);">Color: ${item.selectedColor}</div>` : ''}
+                        ${item.selectedSize ? `<div style="font-size: 0.8rem; color: var(--text-muted);">Size: ${item.selectedSize}</div>` : ''}
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">${formatPrice(item.price)} each</div>
+                        <button class="remove-cart-item-btn" data-index="${idx}" style="font-size: 0.8rem; color: #DF4A38; font-weight: 600; margin-top: 6px; cursor: pointer; text-decoration: underline;">Remove</button>
+                      </div>
+                    </div>
+
+                    <!-- Quantity Control -->
+                    <div style="display: flex; justify-content: center;">
+                      <div style="display: inline-flex; align-items: center; border: 1.5px solid var(--border-light); border-radius: 99px; background: #FFFFFF; padding: 2px 6px;">
+                        <button class="qty-btn" data-action="dec" data-index="${idx}" style="padding: 2px 8px; font-weight: 700; color: var(--text-main); font-size: 1rem;">&minus;</button>
+                        <span style="font-size: 0.9rem; font-weight: 700; padding: 0 8px;">${item.quantity}</span>
+                        <button class="qty-btn" data-action="inc" data-index="${idx}" style="padding: 2px 8px; font-weight: 700; color: var(--text-main); font-size: 1rem;">&plus;</button>
+                      </div>
+                    </div>
+
+                    <!-- Line Total -->
+                    <div style="text-align: right; font-weight: 800; font-size: 1.05rem; color: var(--text-main);">
+                      ${formatPrice(item.price * item.quantity)}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Cart actions bottom -->
+              <div style="padding: 1.25rem 1.5rem; background: #FAFAF7; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center;">
+                <a href="shop.html" style="font-size: 0.9rem; font-weight: 700; color: var(--accent-primary); display: flex; align-items: center; gap: 6px;">
+                  &larr; Continue Exploring Goods
+                </a>
+              </div>
+            </div>
+
+            <!-- Order Summary Card -->
+            <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem;">
+              <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-light);">Order Summary</h3>
+
+              <!-- Promo Code Input -->
+              <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem;">Promotional Code</label>
+                <div style="display: flex; gap: 0.5rem;">
+                  <input type="text" id="promo-input" placeholder="e.g. DESIVORA10 or SAVE15" value="${summary.promo ? summary.promo.code : ''}" style="flex-grow: 1; padding: 0.65rem 1rem; border-radius: 8px; border: 1px solid var(--border-light); font-size: 0.85rem; outline: none; text-transform: uppercase;" />
+                  <button id="apply-promo-btn" class="btn btn-secondary btn-sm">Apply</button>
+                </div>
+                ${summary.promo ? `
+                  <div style="margin-top: 6px; font-size: 0.8rem; color: var(--status-success); display: flex; justify-content: space-between; align-items: center;">
+                    <span>✓ ${summary.promo.label} active</span>
+                    <button id="remove-promo-btn" style="color: #DF4A38; font-size: 0.75rem; cursor: pointer; text-decoration: underline;">Remove</button>
+                  </div>
+                ` : ''}
+              </div>
+
+              <!-- Price Breakdown -->
+              <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
+                <div style="display: flex; justify-content: space-between; color: var(--text-muted);">
+                  <span>Subtotal</span>
+                  <span style="color: var(--text-main); font-weight: 700;">${formatPrice(summary.subtotal)}</span>
+                </div>
+
+                ${summary.discount > 0 ? `
+                  <div style="display: flex; justify-content: space-between; color: var(--status-success);">
+                    <span>Discount</span>
+                    <span style="font-weight: 700;">-${formatPrice(summary.discount)}</span>
+                  </div>
+                ` : ''}
+
+                <div style="display: flex; justify-content: space-between; color: var(--text-muted);">
+                  <span>Carbon-Neutral Delivery</span>
+                  <span style="color: var(--text-main); font-weight: 700;">${summary.shipping === 0 ? 'Complimentary' : formatPrice(summary.shipping)}</span>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-light); padding-top: 1rem; font-size: 1.3rem; font-weight: 800; color: var(--text-main);">
+                  <span>Estimated Total</span>
+                  <span>${formatPrice(summary.total)}</span>
+                </div>
+              </div>
+
+              <a href="checkout.html" class="btn btn-primary btn-block btn-lg" style="margin-bottom: 1rem;">
+                Proceed to Checkout
+              </a>
+
+              <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.8rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Encrypted 256-bit SSL Protected Checkout</span>
+              </div>
+            </div>
+
+          </div>
+        `;
+
+        // Bind item actions
+        wrapper.querySelectorAll('.qty-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idx = parseInt(btn.getAttribute('data-index'));
+            const action = btn.getAttribute('data-action');
+            const current = getCart();
+            if (action === 'inc') {
+              updateCartQuantity(idx, current[idx].quantity + 1);
+            } else {
+              updateCartQuantity(idx, current[idx].quantity - 1);
+            }
+            renderCartPage();
+          });
+        });
+
+        wrapper.querySelectorAll('.remove-cart-item-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idx = parseInt(btn.getAttribute('data-index'));
+            const removed = removeFromCart(idx);
+            if (removed) showToast(`"${removed.name}" removed from bag.`);
+            renderCartPage();
+          });
+        });
+
+        // Promo bindings
+        const applyBtn = wrapper.querySelector('#apply-promo-btn');
+        const promoInput = wrapper.querySelector('#promo-input');
+        if (applyBtn && promoInput) {
+          applyBtn.addEventListener('click', () => {
+            const code = promoInput.value.trim();
+            const res = applyPromoCode(code);
+            if (res.success) {
+              showToast(res.message, 'success');
+              renderCartPage();
+            } else {
+              showToast(res.message, 'error');
+            }
+          });
+        }
+
+        const removePromoBtn = wrapper.querySelector('#remove-promo-btn');
+        if (removePromoBtn) {
+          removePromoBtn.addEventListener('click', () => {
+            removePromoCode();
+            showToast('Promotional code removed.');
+            renderCartPage();
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>

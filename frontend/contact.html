@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concierge Contact &bull; DesiVora Living</title>
+  <meta name="description" content="Reach the DesiVora concierge team for product care inquiries, order assistance, or press questions." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-strip">
+    <div class="container">
+      <div>Complimentary Carbon-Neutral Shipping on Orders Over ₹2,999 &bull; Code: <strong>DESIVORA10</strong></div>
+      <div class="top-strip-links">
+        <a href="about.html">Our Craft</a>
+        <a href="contact.html">Concierge Support</a>
+        <span style="color: #9DA399;">INR (₹)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">DesiVora</span>
+        <span class="brand-tagline">Living &bull; Studio</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle-btn" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="badge-count wishlist-badge" style="display: none;">0</span></a>
+        <button class="icon-btn cart-toggle-btn" aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="badge-count cart-badge" style="display: none;">0</span></button>
+        <a href="login.html" class="icon-btn header-account-link" aria-label="Account"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Page Header -->
+  <main class="section" style="padding-top: 3.5rem; padding-bottom: 6rem;">
+    <div class="container">
+      
+      <div style="max-width: 640px; margin-bottom: 3.5rem;">
+        <span class="section-subtitle">Concierge Desk</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 0.75rem;">We Are Here to Assist</h1>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;">
+          Whether you have questions regarding material provenance, order delivery, or bespoke curation, our studio team responds thoughtfully within 24 hours.
+        </p>
+      </div>
+
+      <!-- 2-Column Contact Layout -->
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: start;" class="shop-layout">
+        
+        <!-- Contact Form -->
+        <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 2.75rem; box-shadow: var(--shadow-sm);">
+          <h2 style="font-size: 1.4rem; margin-bottom: 1.5rem;">Send a Note</h2>
+          
+          <form id="contact-form" novalidate>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Name <span style="color: #DF4A38;">*</span></label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Eleanor Vance" required />
+                <div class="form-error" id="err-c-name"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address <span style="color: #DF4A38;">*</span></label>
+                <input type="email" id="contact-email" class="form-input" placeholder="eleanor@domain.com" required />
+                <div class="form-error" id="err-c-email"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Inquiry Topic</label>
+              <select id="contact-subject" class="form-select">
+                <option value="Order & Delivery Tracking">Order &amp; Delivery Tracking</option>
+                <option value="Product Care & Material Sourcing">Product Care &amp; Material Sourcing</option>
+                <option value="Return or Exchange Request">Return or Exchange Request</option>
+                <option value="Press & Partnership Inquiries">Press &amp; Partnership Inquiries</option>
+                <option value="General Conversation">General Conversation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message <span style="color: #DF4A38;">*</span></label>
+              <textarea id="contact-message" class="form-textarea" rows="5" placeholder="How may we assist you today?" required></textarea>
+              <div class="form-error" id="err-c-msg"></div>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-lg btn-block">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Studio & Business Details -->
+        <div>
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem;">Studio Details</h3>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; font-size: 0.95rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <div>
+                  <div style="font-weight: 700;">Design Atelier &amp; Showroom</div>
+                  <div style="color: var(--text-muted); margin-top: 2px;">148 Mercer Street, SoHo, New York, NY 10012</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <div>
+                  <div style="font-weight: 700;">Direct Email</div>
+                  <a href="mailto:concierge@desivorastudio.com" style="color: var(--accent-primary); font-weight: 600;">concierge@desivorastudio.com</a>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <div>
+                  <div style="font-weight: 700;">Phone Inquiries</div>
+                  <div style="color: var(--text-muted); margin-top: 2px;">+1 (800) 825-3631</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <div>
+                  <div style="font-weight: 700;">Atelier Hours</div>
+                  <div style="color: var(--text-muted); margin-top: 2px;">Monday &ndash; Friday: 9am &ndash; 6pm EST<br />Saturday: 10am &ndash; 4pm EST</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick FAQ Box -->
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1.75rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem;">Frequently Inquired</h4>
+            <details style="margin-bottom: 0.85rem; font-size: 0.9rem;">
+              <summary style="font-weight: 600; cursor: pointer; color: var(--text-main);">How does 30-day return work?</summary>
+              <p style="color: var(--text-muted); margin-top: 6px; font-size: 0.85rem; line-height: 1.5;">Every order comes with a prepaid return shipping slip. Return pieces in original condition for a full refund.</p>
+            </details>
+            <details style="font-size: 0.9rem;">
+              <summary style="font-weight: 600; cursor: pointer; color: var(--text-main);">Is worldwide delivery carbon-neutral?</summary>
+              <p style="color: var(--text-muted); margin-top: 6px; font-size: 0.85rem; line-height: 1.5;">Yes, 100% of emissions generated during transit are offset via certified woodland restoration projects.</p>
+            </details>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none;">
+        <div>&copy; 2026 DesiVora Living &amp; Studio Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { showToast } from './js/ui.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        document.getElementById('err-c-name').textContent = '';
+        document.getElementById('err-c-email').textContent = '';
+        document.getElementById('err-c-msg').textContent = '';
+
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const subject = document.getElementById('contact-subject').value;
+        const message = document.getElementById('contact-message').value.trim();
+
+        let hasErr = false;
+        if (!name) {
+          document.getElementById('err-c-name').textContent = 'Please provide your name.';
+          hasErr = true;
+        }
+        if (!email || !email.includes('@')) {
+          document.getElementById('err-c-email').textContent = 'Please provide a valid email.';
+          hasErr = true;
+        }
+        if (!message) {
+          document.getElementById('err-c-msg').textContent = 'Please enter your message.';
+          hasErr = true;
+        }
+
+        if (hasErr) return;
+
+        const btn = document.getElementById('contact-submit-btn');
+        btn.disabled = true;
+        btn.textContent = 'Transmitting Note...';
+
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, subject, message })
+          });
+          const data = await res.json();
+          showToast(data.message || 'Note received. Our concierge will be in touch.');
+          form.reset();
+        } catch (err) {
+          showToast('Thank you! Your note has been received.', 'success');
+          form.reset();
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

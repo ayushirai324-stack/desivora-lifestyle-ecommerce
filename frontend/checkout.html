@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — DesiVora Living &amp; Studio</title>
+  <meta name="description" content="Secure, encrypted checkout for your DesiVora order." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Minimal Checkout Header -->
+  <header style="background: #FFFFFF; border-bottom: 1px solid var(--border-light); padding: 1.25rem 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">DesiVora</span>
+        <span class="brand-tagline">Living &bull; Studio</span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--status-success)" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <span style="font-weight: 600;">256-Bit SSL Encrypted Checkout</span>
+      </div>
+
+      <a href="cart.html" style="font-size: 0.85rem; font-weight: 700; color: var(--accent-primary);">
+        Return to Bag
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Checkout Content -->
+  <main class="section" style="padding-top: 3rem; padding-bottom: 5rem;">
+    <div class="container">
+      
+      <!-- Container for Checkout Form OR Order Success Screen -->
+      <div id="checkout-view-wrapper">
+        
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 3.5rem; align-items: start;" class="checkout-grid">
+          
+          <!-- Left Column: Checkout Forms -->
+          <div>
+            <form id="checkout-form" novalidate>
+              
+              <!-- 1. Contact Information -->
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                  <h3 style="font-size: 1.15rem; font-weight: 800;">1. Contact Information</h3>
+                  <span id="auth-status-hint" style="font-size: 0.85rem; color: var(--text-muted);">
+                    Already have an account? <a href="login.html" style="color: var(--accent-primary); font-weight: 700;">Sign in</a>
+                  </span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Email Address <span style="color: #DF4A38;">*</span></label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="you@domain.com" required />
+                  <div class="form-error" id="err-email"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contact-phone">Phone Number <span style="color: #DF4A38;">*</span></label>
+                  <input type="tel" id="contact-phone" class="form-input" placeholder="+1 (555) 000-0000" required />
+                  <div class="form-error" id="err-phone"></div>
+                </div>
+              </div>
+
+              <!-- 2. Shipping Address -->
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1.25rem;">2. Shipping Address</h3>
+
+                <div class="form-group">
+                  <label class="form-label" for="ship-name">Full Name <span style="color: #DF4A38;">*</span></label>
+                  <input type="text" id="ship-name" class="form-input" placeholder="e.g. Eleanor Vance" required />
+                  <div class="form-error" id="err-name"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="ship-street">Street Address <span style="color: #DF4A38;">*</span></label>
+                  <input type="text" id="ship-street" class="form-input" placeholder="148 Mercer Street, Apt 4B" required />
+                  <div class="form-error" id="err-street"></div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem;">
+                  <div class="form-group">
+                    <label class="form-label" for="ship-city">City <span style="color: #DF4A38;">*</span></label>
+                    <input type="text" id="ship-city" class="form-input" placeholder="New York" required />
+                    <div class="form-error" id="err-city"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ship-state">State <span style="color: #DF4A38;">*</span></label>
+                    <input type="text" id="ship-state" class="form-input" placeholder="NY" required />
+                    <div class="form-error" id="err-state"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ship-zip">ZIP <span style="color: #DF4A38;">*</span></label>
+                    <input type="text" id="ship-zip" class="form-input" placeholder="10012" required />
+                    <div class="form-error" id="err-zip"></div>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label" for="ship-country">Country / Region</label>
+                  <select id="ship-country" class="form-select">
+                    <option value="India" selected>India</option>
+                    <option value="United States">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Australia">Australia</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 3. Delivery Method -->
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1.25rem;">3. Delivery Method</h3>
+
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                  <label style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; border: 1.5px solid var(--accent-primary); border-radius: 8px; background: var(--bg-soft-green); cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                      <input type="radio" name="shipping-method" value="standard" checked style="accent-color: var(--accent-primary);" />
+                      <div>
+                        <div style="font-weight: 700; font-size: 0.95rem;">Standard Carbon-Neutral Delivery</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Estimated arrival in 3-5 business days via 100% offset transit</div>
+                      </div>
+                    </div>
+                    <span id="standard-shipping-label" style="font-weight: 700; font-size: 0.95rem;">Free</span>
+                  </label>
+
+                  <label style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; border: 1px solid var(--border-light); border-radius: 8px; background: #FFFFFF; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                      <input type="radio" name="shipping-method" value="express" style="accent-color: var(--accent-primary);" />
+                      <div>
+                        <div style="font-weight: 700; font-size: 0.95rem;">Express Priority Courier</div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted);">Guaranteed 1-2 business day air delivery</div>
+                      </div>
+                    </div>
+                    <span style="font-weight: 700; font-size: 0.95rem;">+₹499</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 4. Payment Method -->
+              <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1.25rem;">4. Secure Payment</h3>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                  <button type="button" class="btn btn-secondary btn-sm pay-tab active" data-method="card" style="border-color: var(--accent-primary); background: var(--bg-soft-green);">
+                    Credit / Debit Card
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-sm pay-tab" data-method="apple">
+                    Apple Pay
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-sm pay-tab" data-method="paypal">
+                    PayPal
+                  </button>
+                </div>
+
+                <div id="card-fields">
+                  <div class="form-group">
+                    <label class="form-label" for="card-num">Card Number</label>
+                    <input type="text" id="card-num" class="form-input" placeholder="•••• •••• •••• 4242" value="4532 •••• •••• 8821" />
+                  </div>
+
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                      <label class="form-label" for="card-exp">Expiry (MM/YY)</label>
+                      <input type="text" id="card-exp" class="form-input" placeholder="12/28" value="08/29" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="card-cvc">CVC / CVV</label>
+                      <input type="text" id="card-cvc" class="form-input" placeholder="888" value="842" />
+                    </div>
+                  </div>
+                </div>
+
+                <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; margin-top: 1rem;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  <span>Safe simulation checkout. No live financial data is billed or charged.</span>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="place-order-btn" class="btn btn-primary btn-block btn-lg" style="box-shadow: var(--shadow-md);">
+                Complete Order &bull; <span id="btn-total-amount">₹0</span>
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Right Column: Order Summary -->
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; position: sticky; top: 30px;">
+            <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-light);">In Your Bag</h3>
+
+            <div id="checkout-items-list" style="display: flex; flex-direction: column; gap: 1rem; max-height: 340px; overflow-y: auto; margin-bottom: 1.5rem; padding-right: 4px;">
+              <!-- Dynamic items -->
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid var(--border-light); padding-top: 1.25rem; font-size: 0.95rem;">
+              <div style="display: flex; justify-content: space-between; color: var(--text-muted);">
+                <span>Subtotal</span>
+                <span id="checkout-subtotal" style="font-weight: 700; color: var(--text-main);">₹0</span>
+              </div>
+              <div id="checkout-discount-row" style="display: none; justify-content: space-between; color: var(--status-success);">
+                <span>Discount</span>
+                <span id="checkout-discount" style="font-weight: 700;">-₹0</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; color: var(--text-muted);">
+                <span>Shipping</span>
+                <span id="checkout-shipping" style="font-weight: 700; color: var(--text-main);">₹0</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-light); padding-top: 0.75rem; font-size: 1.35rem; font-weight: 800; color: var(--text-main);">
+                <span>Total</span>
+                <span id="checkout-final-total">₹0</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { getCart, clearCart, getCartSummary } from './js/cart.js';
+    import { getCurrentUser, getToken } from './js/auth.js';
+    import { formatPrice, showToast } from './js/ui.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = getCart();
+      if (cart.length === 0) {
+        window.location.href = 'cart.html';
+        return;
+      }
+
+      const summary = getCartSummary();
+      const user = getCurrentUser();
+
+      // Pre-fill user data if logged in
+      if (user) {
+        const emailInput = document.getElementById('contact-email');
+        const nameInput = document.getElementById('ship-name');
+        if (emailInput) emailInput.value = user.email || '';
+        if (nameInput) nameInput.value = user.name || '';
+        const hint = document.getElementById('auth-status-hint');
+        if (hint) hint.innerHTML = `<span style="color: var(--status-success); font-weight: 600;">✓ Signed in as ${user.name}</span>`;
+      }
+
+      // Render summary items
+      const itemsList = document.getElementById('checkout-items-list');
+      itemsList.innerHTML = cart.map(item => `
+        <div style="display: flex; gap: 0.85rem; align-items: center;">
+          <div style="position: relative; flex-shrink: 0;">
+            <img src="${item.image}" alt="${item.name}" style="width: 58px; height: 58px; object-fit: cover; border-radius: 8px; background: #F6F6F0; border: 1px solid var(--border-light);" />
+            <span style="position: absolute; top: -6px; right: -6px; background: var(--bg-dark); color: #FFF; width: 20px; height: 20px; border-radius: 50%; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center;">${item.quantity}</span>
+          </div>
+          <div style="flex-grow: 1; overflow: hidden;">
+            <div style="font-size: 0.875rem; font-weight: 700; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">${item.selectedColor || item.category}</div>
+          </div>
+          <div style="font-size: 0.9rem; font-weight: 800;">${formatPrice(item.price * item.quantity)}</div>
+        </div>
+      `).join('');
+
+      let expressSelected = false;
+
+      function updateCheckoutTotals() {
+        const shippingCost = expressSelected ? 499.00 : summary.shipping;
+        const finalTotal = Math.max(0, summary.subtotal - summary.discount + shippingCost);
+
+        document.getElementById('checkout-subtotal').textContent = formatPrice(summary.subtotal);
+        document.getElementById('checkout-shipping').textContent = shippingCost === 0 ? 'Complimentary' : formatPrice(shippingCost);
+        document.getElementById('checkout-final-total').textContent = formatPrice(finalTotal);
+        document.getElementById('btn-total-amount').textContent = formatPrice(finalTotal);
+
+        if (summary.discount > 0) {
+          document.getElementById('checkout-discount-row').style.display = 'flex';
+          document.getElementById('checkout-discount').textContent = `-${formatPrice(summary.discount)}`;
+        }
+      }
+
+      updateCheckoutTotals();
+
+      // Shipping option radios
+      document.querySelectorAll('input[name="shipping-method"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          expressSelected = radio.value === 'express';
+          updateCheckoutTotals();
+        });
+      });
+
+      // Payment tab styling
+      document.querySelectorAll('.pay-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.pay-tab').forEach(t => {
+            t.style.borderColor = 'var(--border-light)';
+            t.style.backgroundColor = '#FFF';
+          });
+          tab.style.borderColor = 'var(--accent-primary)';
+          tab.style.backgroundColor = 'var(--bg-soft-green)';
+        });
+      });
+
+      // Checkout form submit
+      const form = document.getElementById('checkout-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Clear errors
+        document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+
+        const email = document.getElementById('contact-email').value.trim();
+        const phone = document.getElementById('contact-phone').value.trim();
+        const name = document.getElementById('ship-name').value.trim();
+        const street = document.getElementById('ship-street').value.trim();
+        const city = document.getElementById('ship-city').value.trim();
+        const state = document.getElementById('ship-state').value.trim();
+        const zip = document.getElementById('ship-zip').value.trim();
+        const country = document.getElementById('ship-country').value;
+
+        let hasError = false;
+
+        if (!email || !email.includes('@')) {
+          document.getElementById('err-email').textContent = 'Please enter a valid email address.';
+          hasError = true;
+        }
+        if (!phone) {
+          document.getElementById('err-phone').textContent = 'Please enter a phone number.';
+          hasError = true;
+        }
+        if (!name) {
+          document.getElementById('err-name').textContent = 'Please enter recipient full name.';
+          hasError = true;
+        }
+        if (!street) {
+          document.getElementById('err-street').textContent = 'Please enter a delivery street address.';
+          hasError = true;
+        }
+        if (!city) {
+          document.getElementById('err-city').textContent = 'Please enter a city.';
+          hasError = true;
+        }
+        if (!state) {
+          document.getElementById('err-state').textContent = 'Please enter a state / province.';
+          hasError = true;
+        }
+        if (!zip) {
+          document.getElementById('err-zip').textContent = 'Please enter a postal code.';
+          hasError = true;
+        }
+
+        if (hasError) {
+          showToast('Please complete all required fields.', 'error');
+          return;
+        }
+
+        const shippingCost = expressSelected ? 499.00 : summary.shipping;
+        const total = Math.max(0, summary.subtotal - summary.discount + shippingCost);
+
+        const orderData = {
+          items: cart.map(i => ({
+            product: i.slug,
+            name: i.name,
+            price: i.price,
+            quantity: i.quantity,
+            image: i.image,
+            selectedColor: i.selectedColor,
+            selectedSize: i.selectedSize
+          })),
+          shippingAddress: {
+            fullName: name,
+            email,
+            phone,
+            street,
+            city,
+            state,
+            zipCode: zip,
+            country
+          },
+          deliveryMethod: {
+            name: expressSelected ? 'Express Priority Courier' : 'Standard Carbon-Neutral Delivery',
+            cost: shippingCost,
+            estimatedDays: expressSelected ? '1-2 business days' : '3-5 business days'
+          },
+          subtotal: summary.subtotal,
+          shipping: shippingCost,
+          discount: summary.discount,
+          total,
+          paymentMethod: 'Credit / Debit Card (Simulated)',
+          guestEmail: email
+        };
+
+        const submitBtn = document.getElementById('place-order-btn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Processing Order...';
+
+        try {
+          const token = getToken();
+          const headers = { 'Content-Type': 'application/json' };
+          if (token) headers['Authorization'] = `Bearer ${token}`;
+
+          const res = await fetch('/api/orders', {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(orderData)
+          });
+
+          const result = await res.json();
+
+          if (!res.ok) {
+            throw new Error(result.message || 'Failed to place order');
+          }
+
+          // Clear cart
+          clearCart();
+
+          // Render Success Screen
+          renderOrderSuccess(result.order);
+        } catch (err) {
+          console.error(err);
+          showToast(err.message || 'Could not place order. Please try again.', 'error');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `Complete Order &bull; <span>${formatPrice(total)}</span>`;
+        }
+      });
+
+      function renderOrderSuccess(order) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const wrapper = document.getElementById('checkout-view-wrapper');
+        wrapper.innerHTML = `
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: clamp(2.5rem, 5vw, 4.5rem); text-align: center; max-width: 720px; margin: 0 auto; box-shadow: var(--shadow-md);">
+            <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--bg-soft-green); color: var(--accent-primary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+
+            <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-primary); margin-bottom: 0.5rem;">
+              Order Confirmed
+            </div>
+
+            <h1 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1rem;">Thank you for your order</h1>
+
+            <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+              We have received your request. A confirmation email with carbon-offset tracking details has been dispatched to <strong>${order.shippingAddress.email}</strong>.
+            </p>
+
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; margin-bottom: 2.5rem; border: 1px solid var(--border-light);">
+              <div>
+                <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 2px;">Order Number</div>
+                <div style="font-size: 1.1rem; font-weight: 800; color: var(--accent-primary);">${order.orderNumber}</div>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 2px;">Estimated Arrival</div>
+                <div style="font-size: 1.05rem; font-weight: 700; color: var(--text-main);">${order.deliveryMethod.estimatedDays}</div>
+              </div>
+              <div style="grid-column: span 2; border-top: 1px solid var(--border-light); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 600; color: var(--text-muted);">Amount Paid</span>
+                <span style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">${formatPrice(order.total)}</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="shop.html" class="btn btn-primary btn-lg">Continue Exploring Goods</a>
+              <a href="account.html" class="btn btn-secondary btn-lg">View Order History</a>
+            </div>
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

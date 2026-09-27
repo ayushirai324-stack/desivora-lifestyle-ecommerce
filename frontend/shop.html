@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Collection — DesiVora Living &amp; Studio</title>
+  <meta name="description" content="Explore DesiVora's complete catalog of conscious lifestyle goods, headphones, apparel, ceramics, wellness gear, and accessories." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-strip">
+    <div class="container">
+      <div>Complimentary Carbon-Neutral Shipping on Orders Over ₹2,999 &bull; Code: <strong>DESIVORA10</strong></div>
+      <div class="top-strip-links">
+        <a href="about.html">Our Craft</a>
+        <a href="contact.html">Concierge Support</a>
+        <span style="color: #9DA399;">INR (₹)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">DesiVora</span>
+        <span class="brand-tagline">Living &bull; Studio</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link active">Shop</a></li>
+          <li><a href="shop.html?category=Electronics" class="nav-link">Electronics</a></li>
+          <li><a href="shop.html?category=Fashion" class="nav-link">Fashion</a></li>
+          <li><a href="shop.html?category=Home%20%26%20Living" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle-btn" aria-label="Search Catalog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count wishlist-badge" style="display: none;">0</span>
+        </a>
+        <button class="icon-btn cart-toggle-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </button>
+        <a href="login.html" class="icon-btn header-account-link" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <button class="hamburger-btn" aria-label="Open Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Shop Main Content -->
+  <main class="section" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <!-- Breadcrumb & Header -->
+      <div style="margin-bottom: 2rem;">
+        <nav style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          <a href="index.html">Home</a> &nbsp;/&nbsp; <span style="color: var(--text-main); font-weight: 600;">Shop All</span>
+        </nav>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h1 style="font-size: clamp(2rem, 3.5vw, 2.75rem);" id="shop-main-title">Shop Collection</h1>
+            <p id="product-count-label" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 4px;">Loading products...</p>
+          </div>
+          
+          <!-- Sort Dropdown & Mobile Filter Trigger -->
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <button class="btn btn-secondary btn-sm mobile-filter-trigger" id="mobile-filter-btn" style="display: none; align-items: center; gap: 6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+              Filters
+            </button>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">Sort By:</span>
+              <select id="sort-select" class="form-select" style="padding: 0.5rem 1rem; width: auto; font-size: 0.875rem;">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest Arrivals</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shop Layout: Sidebar + Grid -->
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 2.5rem; align-items: start;" class="shop-layout">
+        
+        <!-- Left Sidebar Filters -->
+        <aside class="shop-sidebar" id="filter-sidebar">
+          <div style="background: #FFFFFF; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.75rem; position: sticky; top: 90px;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-light);">
+              <h3 style="font-size: 1.05rem; font-weight: 700;">Filters</h3>
+              <button id="reset-filters-btn" style="font-size: 0.8rem; font-weight: 600; color: var(--accent-primary); cursor: pointer;">Reset All</button>
+            </div>
+
+            <!-- Categories -->
+            <div style="margin-bottom: 1.75rem;">
+              <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-main); margin-bottom: 0.85rem; font-weight: 700;">Categories</h4>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;" id="category-filter-list">
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer;"><input type="radio" name="category-filter" value="All" checked /> All Products</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer;"><input type="radio" name="category-filter" value="Electronics" /> Electronics</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer;"><input type="radio" name="category-filter" value="Fashion" /> Fashion</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer;"><input type="radio" name="category-filter" value="Home & Living" /> Home &amp; Living</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer;"><input type="radio" name="category-filter" value="Beauty" /> Beauty &amp; Fragrance</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer;"><input type="radio" name="category-filter" value="Sports" /> Sports &amp; Wellness</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer;"><input type="radio" name="category-filter" value="Accessories" /> Accessories</label></li>
+              </ul>
+            </div>
+
+            <!-- Max Price Slider -->
+            <div style="margin-bottom: 1.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-main); font-weight: 700;">Max Price</h4>
+                <span id="price-slider-val" style="font-weight: 700; font-size: 0.9rem; color: var(--accent-primary);">₹25,000</span>
+              </div>
+              <input type="range" id="price-range-slider" min="1000" max="25000" step="500" value="25000" style="width: 100%; accent-color: var(--accent-primary);" />
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-light); margin-top: 4px;">
+                <span>₹1,000</span>
+                <span>₹25,000</span>
+              </div>
+            </div>
+
+            <!-- Minimum Rating -->
+            <div>
+              <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-main); margin-bottom: 0.75rem; font-weight: 700;">Customer Rating</h4>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; cursor: pointer;"><input type="radio" name="rating-filter" value="" checked /> Any Rating</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; cursor: pointer;"><input type="radio" name="rating-filter" value="4.8" /> 4.8 Stars &amp; above</label></li>
+                <li><label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; cursor: pointer;"><input type="radio" name="rating-filter" value="4.5" /> 4.5 Stars &amp; above</label></li>
+              </ul>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- Product Grid Area -->
+        <div>
+          <div id="shop-products-grid" class="product-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+            <!-- Populated via JavaScript -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <span class="brand-name">DesiVora</span>
+            <span class="brand-tagline">Living &bull; Studio</span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; max-width: 280px;">Mindful everyday living and intentional goods crafted for those who value quiet luxury and organic harmony.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Collection</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Goods</a></li>
+            <li><a href="shop.html?category=Electronics">Electronics</a></li>
+            <li><a href="shop.html?category=Fashion">Fashion</a></li>
+            <li><a href="shop.html?category=Home%20%26%20Living">Home &amp; Living</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Concierge Contact</a></li>
+            <li><a href="contact.html">Shipping Details</a></li>
+            <li><a href="contact.html">Easy 30-Day Returns</a></li>
+            <li><a href="account.html">My Orders</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DesiVora Studio</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#sustainability">Sustainability</a></li>
+            <li><a href="contact.html">Press Inquiries</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col-subscribe">
+          <h4>The DesiVora Note</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Join for private collector invitations and notes.</p>
+          <form class="newsletter-form" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email" required style="padding: 0.65rem 1rem; border-radius: 99px; border: 1px solid var(--border-light); font-size: 0.85rem; flex-grow: 1; outline: none; background: #FFF;" />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 DesiVora Living &amp; Studio Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawers and Modals -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="cart-drawer" class="side-drawer" aria-label="Shopping Bag Drawer">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <h3 style="font-size: 1.15rem; font-weight: 700;">Shopping Bag</h3>
+      </div>
+      <button class="drawer-close-btn icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    </div>
+    <div class="drawer-body" id="cart-drawer-items"></div>
+    <div class="drawer-footer" id="cart-drawer-footer"></div>
+  </aside>
+
+  <aside id="mobile-menu-drawer" class="side-drawer" style="left: 0; right: auto; transform: translateX(-100%);">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo"><span class="brand-name">DesiVora</span></a>
+      <button class="drawer-close-btn icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    </div>
+    <div class="drawer-body">
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+        <li><a href="index.html" style="font-size: 1.15rem; font-weight: 700;">Home</a></li>
+        <li><a href="shop.html" style="font-size: 1.15rem; font-weight: 700; color: var(--accent-primary);">Shop All Products</a></li>
+        <li><a href="wishlist.html" style="font-size: 1.05rem; color: var(--text-muted);">My Wishlist</a></li>
+        <li><a href="about.html" style="font-size: 1.05rem; color: var(--text-muted);">About DesiVora</a></li>
+        <li><a href="contact.html" style="font-size: 1.05rem; color: var(--text-muted);">Contact Us</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div id="search-modal" style="position: fixed; inset: 0; background: rgba(23, 26, 23, 0.7); backdrop-filter: blur(8px); z-index: 2000; display: none; align-items: flex-start; justify-content: center; padding: 3rem 1rem;">
+    <div style="background: #FFFFFF; width: 100%; max-width: 680px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border-light);">
+      <div style="display: flex; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-light); gap: 1rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" placeholder="Search curated goods..." style="width: 100%; border: none; outline: none; font-size: 1.1rem; color: var(--text-main);" />
+        <button id="search-modal-close" style="color: var(--text-muted);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+      </div>
+      <div id="search-modal-results" style="padding: 1.5rem; max-height: 480px; overflow-y: auto;"></div>
+    </div>
+  </div>
+
+  <style>
+    #search-modal.active { display: flex !important; }
+    #mobile-menu-drawer.active { transform: translateX(0) !important; }
+  </style>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { fetchProducts, createProductCardHTML, bindProductCardEvents, renderSkeletons } from './js/products.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('shop-products-grid');
+      const countLabel = document.getElementById('product-count-label');
+      const pageTitle = document.getElementById('shop-main-title');
+      const sortSelect = document.getElementById('sort-select');
+      const priceSlider = document.getElementById('price-range-slider');
+      const priceSliderVal = document.getElementById('price-slider-val');
+      const resetBtn = document.getElementById('reset-filters-btn');
+
+      // Read query params from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialCategory = urlParams.get('category') || 'All';
+      const initialSearch = urlParams.get('search') || '';
+      const initialFilter = urlParams.get('filter') || '';
+
+      // Set initial category radio
+      const matchedRadio = document.querySelector(`input[name="category-filter"][value="${initialCategory}"]`);
+      if (matchedRadio) matchedRadio.checked = true;
+
+      if (initialCategory !== 'All') {
+        pageTitle.textContent = `${initialCategory} Collection`;
+      } else if (initialSearch) {
+        pageTitle.textContent = `Search: "${initialSearch}"`;
+      } else if (initialFilter === 'bestseller') {
+        pageTitle.textContent = 'Best Sellers';
+      } else if (initialFilter === 'new') {
+        pageTitle.textContent = 'New Arrivals';
+      } else if (initialFilter === 'sale') {
+        pageTitle.textContent = 'Seasonal Offers';
+      }
+
+      // Live price slider text
+      priceSlider.addEventListener('input', () => {
+        priceSliderVal.textContent = '₹' + Number(priceSlider.value).toLocaleString('en-IN');
+      });
+      priceSlider.addEventListener('change', loadFilteredProducts);
+
+      // Category filter change
+      document.querySelectorAll('input[name="category-filter"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+          const selected = radio.value;
+          pageTitle.textContent = selected === 'All' ? 'Shop Collection' : `${selected} Collection`;
+          loadFilteredProducts();
+        });
+      });
+
+      // Rating filter change
+      document.querySelectorAll('input[name="rating-filter"]').forEach(radio => {
+        radio.addEventListener('change', loadFilteredProducts);
+      });
+
+      // Sort change
+      sortSelect.addEventListener('change', loadFilteredProducts);
+
+      // Reset
+      resetBtn.addEventListener('click', () => {
+        document.querySelector('input[name="category-filter"][value="All"]').checked = true;
+        document.querySelector('input[name="rating-filter"][value=""]').checked = true;
+        priceSlider.value = 25000;
+        priceSliderVal.textContent = '₹25,000';
+        sortSelect.value = 'featured';
+        pageTitle.textContent = 'Shop Collection';
+        loadFilteredProducts();
+      });
+
+      async function loadFilteredProducts() {
+        renderSkeletons(grid, 6);
+        countLabel.textContent = 'Filtering products...';
+
+        const categoryVal = document.querySelector('input[name="category-filter"]:checked')?.value || 'All';
+        const ratingVal = document.querySelector('input[name="rating-filter"]:checked')?.value || '';
+        const maxPriceVal = priceSlider.value;
+        const sortVal = sortSelect.value;
+
+        const filters = {
+          category: categoryVal,
+          maxPrice: maxPriceVal,
+          sort: sortVal
+        };
+
+        if (ratingVal) filters.rating = ratingVal;
+        if (initialSearch) filters.search = initialSearch;
+        if (initialFilter === 'bestseller') filters.bestseller = 'true';
+        if (initialFilter === 'new') filters.newArrival = 'true';
+
+        const products = await fetchProducts(filters);
+
+        countLabel.textContent = `Showing ${products.length} curated ${products.length === 1 ? 'item' : 'items'}`;
+
+        if (products.length === 0) {
+          grid.innerHTML = `
+            <div class="empty-state" style="grid-column: 1 / -1;">
+              <div class="empty-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+              <h3 style="margin-bottom: 0.5rem; font-weight: 700;">No products match your criteria</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Try adjusting your price slider, rating filter, or search term.</p>
+              <button class="btn btn-primary btn-sm" id="empty-reset-btn">Reset All Filters</button>
+            </div>
+          `;
+          document.getElementById('empty-reset-btn')?.addEventListener('click', () => resetBtn.click());
+          return;
+        }
+
+        grid.innerHTML = products.map(p => createProductCardHTML(p)).join('');
+        bindProductCardEvents(grid);
+      }
+
+      loadFilteredProducts();
+    });
+  </script>
+</body>
+</html>

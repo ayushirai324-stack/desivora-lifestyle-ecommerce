@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details — DesiVora Living &amp; Studio</title>
+  <meta name="description" content="View product specifications, materials, pricing, and authentic craftsmanship details." />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-strip">
+    <div class="container">
+      <div>Complimentary Carbon-Neutral Shipping on Orders Over ₹2,999 &bull; Code: <strong>DESIVORA10</strong></div>
+      <div class="top-strip-links">
+        <a href="about.html">Our Craft</a>
+        <a href="contact.html">Concierge Support</a>
+        <span style="color: #9DA399;">INR (₹)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">DesiVora</span>
+        <span class="brand-tagline">Living &bull; Studio</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="shop.html?category=Electronics" class="nav-link">Electronics</a></li>
+          <li><a href="shop.html?category=Fashion" class="nav-link">Fashion</a></li>
+          <li><a href="shop.html?category=Home%20%26%20Living" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle-btn" aria-label="Search Catalog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count wishlist-badge" style="display: none;">0</span>
+        </a>
+        <button class="icon-btn cart-toggle-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </button>
+        <a href="login.html" class="icon-btn header-account-link" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <button class="hamburger-btn" aria-label="Open Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Details Container -->
+  <main class="section" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <!-- Breadcrumb -->
+      <nav style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 2rem;" id="product-breadcrumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="shop.html">Shop</a> &nbsp;/&nbsp; <span style="color: var(--text-main); font-weight: 600;" id="breadcrumb-title">Product Details</span>
+      </nav>
+
+      <!-- Main Product View (2 Columns) -->
+      <div id="product-main-view" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start;" class="product-detail-grid">
+        <!-- Rendered dynamically via JavaScript -->
+        <div class="skeleton" style="width: 100%; aspect-ratio: 1/1; border-radius: 16px;"></div>
+        <div>
+          <div class="skeleton" style="width: 30%; height: 16px; margin-bottom: 12px;"></div>
+          <div class="skeleton" style="width: 80%; height: 32px; margin-bottom: 16px;"></div>
+          <div class="skeleton" style="width: 40%; height: 24px; margin-bottom: 24px;"></div>
+          <div class="skeleton" style="width: 100%; height: 90px; margin-bottom: 24px;"></div>
+          <div class="skeleton" style="width: 100%; height: 48px; border-radius: 99px;"></div>
+        </div>
+      </div>
+
+      <!-- Product Specifications, Materials & Reviews Section -->
+      <section style="margin-top: 5rem; padding-top: 3.5rem; border-top: 1px solid var(--border-light);" id="product-extra-info">
+        <!-- Dynamic accordions/tabs rendered via JavaScript -->
+      </section>
+
+      <!-- Related Products Section -->
+      <section style="margin-top: 5rem;">
+        <div class="section-header">
+          <div>
+            <span class="section-subtitle">Complementary Curation</span>
+            <h2 class="section-title">You May Also Appreciate</h2>
+          </div>
+          <a href="shop.html" class="view-all-link">Browse Full Archive &rarr;</a>
+        </div>
+        <div id="related-products-grid" class="product-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <span class="brand-name">DesiVora</span>
+            <span class="brand-tagline">Living &bull; Studio</span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; max-width: 280px;">Mindful everyday living and intentional goods crafted for those who value quiet luxury and organic harmony.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Collection</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Goods</a></li>
+            <li><a href="shop.html?category=Electronics">Electronics</a></li>
+            <li><a href="shop.html?category=Fashion">Fashion</a></li>
+            <li><a href="shop.html?category=Home%20%26%20Living">Home &amp; Living</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Concierge Contact</a></li>
+            <li><a href="contact.html">Shipping Details</a></li>
+            <li><a href="contact.html">Easy 30-Day Returns</a></li>
+            <li><a href="account.html">My Orders</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DesiVora Studio</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#sustainability">Sustainability</a></li>
+            <li><a href="contact.html">Press Inquiries</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col-subscribe">
+          <h4>The DesiVora Note</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Join for private collector invitations and notes.</p>
+          <form class="newsletter-form" style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Your email" required style="padding: 0.65rem 1rem; border-radius: 99px; border: 1px solid var(--border-light); font-size: 0.85rem; flex-grow: 1; outline: none; background: #FFF;" />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 DesiVora Living &amp; Studio Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawers & Modals -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="cart-drawer" class="side-drawer" aria-label="Shopping Bag Drawer">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <h3 style="font-size: 1.15rem; font-weight: 700;">Shopping Bag</h3>
+      </div>
+      <button class="drawer-close-btn icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    </div>
+    <div class="drawer-body" id="cart-drawer-items"></div>
+    <div class="drawer-footer" id="cart-drawer-footer"></div>
+  </aside>
+
+  <aside id="mobile-menu-drawer" class="side-drawer" style="left: 0; right: auto; transform: translateX(-100%);">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo"><span class="brand-name">DesiVora</span></a>
+      <button class="drawer-close-btn icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    </div>
+    <div class="drawer-body">
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+        <li><a href="index.html" style="font-size: 1.15rem; font-weight: 700;">Home</a></li>
+        <li><a href="shop.html" style="font-size: 1.15rem; font-weight: 700;">Shop All</a></li>
+        <li><a href="wishlist.html" style="font-size: 1.05rem; color: var(--text-muted);">Wishlist</a></li>
+        <li><a href="about.html" style="font-size: 1.05rem; color: var(--text-muted);">About Us</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <div id="search-modal" style="position: fixed; inset: 0; background: rgba(23, 26, 23, 0.7); backdrop-filter: blur(8px); z-index: 2000; display: none; align-items: flex-start; justify-content: center; padding: 3rem 1rem;">
+    <div style="background: #FFFFFF; width: 100%; max-width: 680px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border-light);">
+      <div style="display: flex; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-light); gap: 1rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" placeholder="Search curated goods..." style="width: 100%; border: none; outline: none; font-size: 1.1rem; color: var(--text-main);" />
+        <button id="search-modal-close" style="color: var(--text-muted);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+      </div>
+      <div id="search-modal-results" style="padding: 1.5rem; max-height: 480px; overflow-y: auto;"></div>
+    </div>
+  </div>
+
+  <style>
+    #search-modal.active { display: flex !important; }
+    #mobile-menu-drawer.active { transform: translateX(0) !important; }
+  </style>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { fetchProductBySlug, createProductCardHTML, bindProductCardEvents } from './js/products.js';
+    import { formatPrice, renderStars, showToast } from './js/ui.js';
+    import { addToCart } from './js/cart.js';
+    import { isProductInWishlist, toggleWishlist } from './js/wishlist.js';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const slug = urlParams.get('slug') || urlParams.get('id') || 'solace-wireless-headphones';
+
+      const mainContainer = document.getElementById('product-main-view');
+      const breadcrumbTitle = document.getElementById('breadcrumb-title');
+      const breadcrumbNav = document.getElementById('product-breadcrumb');
+      const extraInfoContainer = document.getElementById('product-extra-info');
+      const relatedGrid = document.getElementById('related-products-grid');
+
+      const data = await fetchProductBySlug(slug);
+
+      if (!data || !data.product) {
+        mainContainer.innerHTML = `
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <h3>Product Not Found</h3>
+            <p style="margin-bottom: 1.5rem;">We couldn't locate the specified item in our active catalog.</p>
+            <a href="shop.html" class="btn btn-primary">Return to Shop</a>
+          </div>
+        `;
+        return;
+      }
+
+      const product = data.product;
+      const related = data.related || [];
+
+      // Update titles
+      document.title = `${product.name} — DesiVora Living`;
+      breadcrumbTitle.textContent = product.name;
+      breadcrumbNav.innerHTML = `
+        <a href="index.html">Home</a> &nbsp;/&nbsp; 
+        <a href="shop.html">Shop</a> &nbsp;/&nbsp; 
+        <a href="shop.html?category=${encodeURIComponent(product.category)}">${product.category}</a> &nbsp;/&nbsp; 
+        <span style="color: var(--text-main); font-weight: 600;">${product.name}</span>
+      `;
+
+      const images = product.images && product.images.length ? product.images : ['https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'];
+      const isWishlisted = isProductInWishlist(product.slug || product._id);
+
+      // Color radio selection HTML
+      let colorMarkup = '';
+      if (product.colors && product.colors.length) {
+        colorMarkup = `
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem;">
+              Color: <span id="selected-color-label" style="font-weight: 600; color: var(--text-muted);">${product.colors[0]}</span>
+            </label>
+            <div style="display: flex; gap: 0.5rem;" id="color-options-wrap">
+              ${product.colors.map((c, i) => `
+                <button type="button" class="color-select-btn ${i === 0 ? 'active' : ''}" data-color="${c}" style="padding: 0.45rem 1rem; border-radius: 99px; border: 1.5px solid ${i === 0 ? 'var(--accent-primary)' : 'var(--border-light)'}; background: ${i === 0 ? 'var(--bg-soft-green)' : '#FFF'}; font-size: 0.85rem; font-weight: 600; cursor: pointer;">
+                  ${c}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Size selector HTML
+      let sizeMarkup = '';
+      if (product.sizes && product.sizes.length) {
+        sizeMarkup = `
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+              <label style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">
+                Size: <span id="selected-size-label" style="font-weight: 600; color: var(--text-muted);">${product.sizes[0]}</span>
+              </label>
+              <a href="#" style="font-size: 0.75rem; text-decoration: underline; color: var(--text-muted);">Size Guide</a>
+            </div>
+            <div style="display: flex; gap: 0.5rem;" id="size-options-wrap">
+              ${product.sizes.map((s, i) => `
+                <button type="button" class="size-select-btn ${i === 0 ? 'active' : ''}" data-size="${s}" style="width: 44px; height: 44px; border-radius: 8px; border: 1.5px solid ${i === 0 ? 'var(--accent-primary)' : 'var(--border-light)'}; background: ${i === 0 ? 'var(--bg-soft-green)' : '#FFF'}; font-size: 0.875rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                  ${s}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Render 2-Column Product Main View
+      mainContainer.innerHTML = `
+        <!-- Left: Gallery -->
+        <div>
+          <div style="position: relative; width: 100%; aspect-ratio: 1/1; border-radius: var(--radius-lg); overflow: hidden; background: #F6F6F0; border: 1px solid var(--border-light); margin-bottom: 1rem; box-shadow: var(--shadow-sm);">
+            <img id="main-product-img" src="${images[0]}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" />
+          </div>
+
+          <!-- Thumbnails -->
+          ${images.length > 1 ? `
+            <div style="display: flex; gap: 0.75rem;">
+              ${images.map((img, idx) => `
+                <button class="thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${img}" style="width: 72px; height: 72px; border-radius: 8px; overflow: hidden; border: 2px solid ${idx === 0 ? 'var(--accent-primary)' : 'transparent'}; cursor: pointer;">
+                  <img src="${img}" alt="Thumbnail ${idx + 1}" style="width: 100%; height: 100%; object-fit: cover;" />
+                </button>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Right: Info & Controls -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-primary);">${product.category}</span>
+            <span style="font-size: 0.8rem; color: var(--status-success); font-weight: 600; display: flex; align-items: center; gap: 4px;">
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--status-success);"></span> In Stock &bull; Ready to Ship
+            </span>
+          </div>
+
+          <h1 style="font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.2; margin-bottom: 0.75rem;">${product.name}</h1>
+
+          <!-- Rating -->
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; gap: 2px; color: #E6A23C;">${renderStars(product.rating || 4.9)}</div>
+            <span style="font-size: 0.875rem; font-weight: 700;">${product.rating || 4.9}</span>
+            <span style="color: var(--text-light); font-size: 0.85rem;">(${product.reviewCount || 48} verified reviews)</span>
+          </div>
+
+          <!-- Pricing -->
+          <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-light);">
+            <span style="font-size: 2rem; font-weight: 800; color: var(--text-main);">${formatPrice(product.price)}</span>
+            ${product.originalPrice ? `<span style="font-size: 1.2rem; color: var(--text-light); text-decoration: line-through;">${formatPrice(product.originalPrice)}</span>` : ''}
+            ${product.discount > 0 ? `<span class="product-badge badge-sale">Save ${product.discount}%</span>` : ''}
+          </div>
+
+          <!-- Short Description -->
+          <p style="font-size: 1rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 2rem;">
+            ${product.description}
+          </p>
+
+          <!-- Selectors -->
+          ${colorMarkup}
+          ${sizeMarkup}
+
+          <!-- Quantity Stepper & Add to Bag -->
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
+            
+            <!-- Stepper -->
+            <div style="display: inline-flex; align-items: center; border: 1.5px solid var(--border-light); border-radius: 99px; background: #FFFFFF; padding: 4px;">
+              <button id="qty-minus" style="width: 36px; height: 36px; border-radius: 50%; font-size: 1.1rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; justify-content: center;">&minus;</button>
+              <span id="qty-display" style="width: 36px; text-align: center; font-weight: 700; font-size: 1rem;">1</span>
+              <button id="qty-plus" style="width: 36px; height: 36px; border-radius: 50%; font-size: 1.1rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; justify-content: center;">&plus;</button>
+            </div>
+
+            <!-- Add to Bag Button -->
+            <button id="detail-add-bag-btn" class="btn btn-primary btn-lg" style="flex-grow: 1;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Add to Bag
+            </button>
+
+            <!-- Wishlist Button -->
+            <button id="detail-wishlist-btn" class="icon-btn" style="width: 52px; height: 52px; border: 1.5px solid var(--border-light); border-radius: 50%;" title="Wishlist">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="${isWishlisted ? '#DF4A38' : 'none'}" stroke="${isWishlisted ? '#DF4A38' : 'currentColor'}" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+
+          <!-- Buy Now Button -->
+          <button id="detail-buy-now-btn" class="btn btn-dark btn-block btn-lg" style="margin-bottom: 2rem;">
+            Buy Now with Express Checkout
+          </button>
+
+          <!-- Delivery Service Notes -->
+          <div style="background: var(--bg-soft-green); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.85rem;">
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon></svg>
+              <span><strong>Complimentary Carbon-Neutral Shipping</strong> on orders over ₹2,999</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+              <span><strong>30-Day Effortless Returns</strong> with pre-paid return labels included</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Specifications Map
+      let specsRows = '';
+      if (product.specifications) {
+        const entries = product.specifications instanceof Map 
+          ? Array.from(product.specifications.entries())
+          : Object.entries(product.specifications);
+        specsRows = entries.map(([key, val]) => `
+          <tr style="border-bottom: 1px solid var(--border-light);">
+            <td style="padding: 0.85rem 1rem; font-weight: 700; width: 35%; color: var(--text-main); font-size: 0.9rem;">${key}</td>
+            <td style="padding: 0.85rem 1rem; color: var(--text-muted); font-size: 0.9rem;">${val}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Extra Information Tabs/Sections
+      extraInfoContainer.innerHTML = `
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem;">
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Materiality &amp; Craft</h3>
+            <p style="line-height: 1.7; color: var(--text-muted); margin-bottom: 1.5rem;">
+              Every DesiVora piece is designed with an obsession for tactile balance and longevity. We reject fleeting disposable design in favor of authentic materials that age with grace and dignity.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div style="background: #FFFFFF; padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light);">
+                <div style="font-weight: 700; font-size: 0.875rem;">Traceable Origin</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">Direct ethical partnership</div>
+              </div>
+              <div style="background: #FFFFFF; padding: 1rem; border-radius: 8px; border: 1px solid var(--border-light);">
+                <div style="font-weight: 700; font-size: 0.875rem;">Repair Promise</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">2-year maker warranty</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Technical Specifications</h3>
+            <table style="width: 100%; border-collapse: collapse; background: #FFFFFF; border-radius: 8px; border: 1px solid var(--border-light); overflow: hidden;">
+              <tbody>
+                ${specsRows || `<tr><td style="padding: 1rem;">Standard premium craftsmanship specifications apply.</td></tr>`}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+
+      // Thumbnails interaction
+      const mainImg = document.getElementById('main-product-img');
+      document.querySelectorAll('.thumb-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.thumb-btn').forEach(b => b.style.borderColor = 'transparent');
+          btn.style.borderColor = 'var(--accent-primary)';
+          mainImg.src = btn.getAttribute('data-src');
+        });
+      });
+
+      // Quantity controls
+      let currentQuantity = 1;
+      const qtyDisplay = document.getElementById('qty-display');
+      document.getElementById('qty-plus').addEventListener('click', () => {
+        currentQuantity++;
+        qtyDisplay.textContent = currentQuantity;
+      });
+      document.getElementById('qty-minus').addEventListener('click', () => {
+        if (currentQuantity > 1) {
+          currentQuantity--;
+          qtyDisplay.textContent = currentQuantity;
+        }
+      });
+
+      // Color selection
+      let selectedColor = product.colors && product.colors.length ? product.colors[0] : null;
+      document.querySelectorAll('.color-select-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.color-select-btn').forEach(b => {
+            b.style.borderColor = 'var(--border-light)';
+            b.style.backgroundColor = '#FFF';
+          });
+          btn.style.borderColor = 'var(--accent-primary)';
+          btn.style.backgroundColor = 'var(--bg-soft-green)';
+          selectedColor = btn.getAttribute('data-color');
+          const label = document.getElementById('selected-color-label');
+          if (label) label.textContent = selectedColor;
+        });
+      });
+
+      // Size selection
+      let selectedSize = product.sizes && product.sizes.length ? product.sizes[0] : null;
+      document.querySelectorAll('.size-select-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.size-select-btn').forEach(b => {
+            b.style.borderColor = 'var(--border-light)';
+            b.style.backgroundColor = '#FFF';
+          });
+          btn.style.borderColor = 'var(--accent-primary)';
+          btn.style.backgroundColor = 'var(--bg-soft-green)';
+          selectedSize = btn.getAttribute('data-size');
+          const label = document.getElementById('selected-size-label');
+          if (label) label.textContent = selectedSize;
+        });
+      });
+
+      // Add to Bag action
+      document.getElementById('detail-add-bag-btn').addEventListener('click', () => {
+        addToCart({
+          slug: product.slug || product._id,
+          name: product.name,
+          price: product.price,
+          image: images[0],
+          category: product.category,
+          quantity: currentQuantity,
+          selectedColor,
+          selectedSize
+        });
+        showToast(`Added ${currentQuantity} &times; "${product.name}" to your bag.`);
+      });
+
+      // Buy Now action
+      document.getElementById('detail-buy-now-btn').addEventListener('click', () => {
+        addToCart({
+          slug: product.slug || product._id,
+          name: product.name,
+          price: product.price,
+          image: images[0],
+          category: product.category,
+          quantity: currentQuantity,
+          selectedColor,
+          selectedSize
+        }, false);
+        window.location.href = 'checkout.html';
+      });
+
+      // Wishlist toggle
+      const wishlistBtn = document.getElementById('detail-wishlist-btn');
+      wishlistBtn.addEventListener('click', () => {
+        const added = toggleWishlist(product.slug || product._id);
+        const svg = wishlistBtn.querySelector('svg');
+        if (added) {
+          svg.setAttribute('fill', '#DF4A38');
+          svg.setAttribute('stroke', '#DF4A38');
+          showToast(`"${product.name}" added to wishlist.`);
+        } else {
+          svg.setAttribute('fill', 'none');
+          svg.setAttribute('stroke', 'currentColor');
+          showToast(`"${product.name}" removed from wishlist.`);
+        }
+      });
+
+      // Render Related Products
+      if (relatedGrid && related.length) {
+        relatedGrid.innerHTML = related.map(p => createProductCardHTML(p)).join('');
+        bindProductCardEvents(relatedGrid);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DesiVora — Mindful Living & Curated Goods</title>
+  <meta name="description" content="Discover DesiVora's thoughtfully curated collection of everyday lifestyle essentials, electronics, organic fashion, home goods, and wellness products." />
+  <meta property="og:title" content="DesiVora — Mindful Living & Curated Goods" />
+  <meta property="og:description" content="Elevate your everyday with premium, intentional design." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#71884A" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- 1. Top Announcement Bar -->
+  <div class="top-strip">
+    <div class="container">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: var(--accent-primary);"></span>
+        <span>Complimentary Carbon-Neutral Shipping on Orders Over ₹2,999 &bull; Code: <strong>DESIVORA10</strong></span>
+      </div>
+      <div class="top-strip-links">
+        <a href="about.html">Our Craft</a>
+        <a href="contact.html">Concierge Support</a>
+        <span style="color: #9DA399;">INR (₹)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Sticky Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Left: Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">DesiVora</span>
+        <span class="brand-tagline">Living &bull; Studio</span>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="shop.html?category=Electronics" class="nav-link">Electronics</a></li>
+          <li><a href="shop.html?category=Fashion" class="nav-link">Fashion</a></li>
+          <li><a href="shop.html?category=Home%20%26%20Living" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Action Icons -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="icon-btn search-toggle-btn" aria-label="Search Catalog" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="icon-btn" aria-label="View Wishlist" title="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-count wishlist-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Cart Trigger -->
+        <button class="icon-btn cart-toggle-btn" aria-label="Open Shopping Bag" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-count cart-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Account -->
+        <a href="login.html" class="icon-btn header-account-link" aria-label="User Account" title="Sign In">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" aria-label="Open Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section (Inspired by layout rhythm & premium lifestyle composition) -->
+  <section class="section" style="padding-top: 2rem; padding-bottom: 3.5rem;">
+    <div class="container">
+      <div style="background-color: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: clamp(2.5rem, 5vw, 5rem); position: relative; overflow: hidden; display: grid; grid-template-columns: 1.15fr 1fr; gap: 3.5rem; align-items: center;" class="hero-container">
+        
+        <!-- Left Hero Content -->
+        <div class="hero-content animate-fade-in-up">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #FFFFFF; padding: 0.35rem 0.9rem; border-radius: 99px; border: 1px solid var(--border-light); margin-bottom: 1.5rem;">
+            <span style="width: 7px; height: 7px; border-radius: 50%; background-color: var(--accent-primary);"></span>
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-primary);">Curated For Everyday</span>
+          </div>
+
+          <h1 style="margin-bottom: 1.25rem; font-weight: 800; color: var(--text-main); line-height: 1.12;">
+            Elevate Your Everyday With Better Finds
+          </h1>
+
+          <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 2.25rem; max-width: 520px;">
+            A conscious collection of timeless essentials designed with organic textures, acoustic precision, and enduring natural craftsmanship.
+          </p>
+
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 2.5rem;" class="hero-buttons">
+            <a href="shop.html" class="btn btn-primary btn-lg">
+              Shop Collection
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="shop.html?filter=new" class="btn btn-secondary btn-lg">
+              Explore New Arrivals
+            </a>
+          </div>
+
+          <!-- Trust & Social Proof Indicator -->
+          <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06);" class="hero-trust-row">
+            <div style="display: flex; margin-left: 6px;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Customer" style="width: 34px; height: 34px; border-radius: 50%; border: 2px solid #FFF; margin-left: -6px; object-fit: cover;" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Customer" style="width: 34px; height: 34px; border-radius: 50%; border: 2px solid #FFF; margin-left: -6px; object-fit: cover;" />
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Customer" style="width: 34px; height: 34px; border-radius: 50%; border: 2px solid #FFF; margin-left: -6px; object-fit: cover;" />
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 4px;">
+                <div style="color: #E6A23C; display: flex;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <span style="font-weight: 800; font-size: 0.85rem; color: var(--text-main);">4.9 / 5.0</span>
+              </div>
+              <p style="font-size: 0.775rem; color: var(--text-muted); margin: 0;">Over 18,000+ mindful shoppers worldwide</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Professional Lifestyle Product Composition with floating elements -->
+        <div style="position: relative; width: 100%; height: 100%; min-height: 440px; display: flex; align-items: center; justify-content: center;">
+          
+          <!-- Main Hero Image (Stoneware, botanical & headphones aesthetic) -->
+          <div style="position: relative; width: 88%; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid #FFFFFF;">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80" alt="Curated Lifestyle Gear" style="width: 100%; height: 380px; object-fit: cover;" />
+          </div>
+
+          <!-- Floating Badge 1: Top Right Product Feature -->
+          <div class="animate-float-1" style="position: absolute; top: -10px; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid var(--border-light); display: flex; align-items: center; gap: 0.85rem; max-width: 220px;">
+            <div style="width: 40px; height: 40px; border-radius: 8px; background-color: var(--bg-soft-green); display: flex; align-items: center; justify-content: center; color: var(--accent-primary); flex-shrink: 0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-primary); font-weight: 700;">Organic Linen</div>
+              <div style="font-size: 0.875rem; font-weight: 800; color: var(--text-main);">Certified GOTS</div>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2: Bottom Left Product Tag -->
+          <div class="animate-float-2" style="position: absolute; bottom: 0; left: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 0.85rem 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid var(--border-light); display: flex; align-items: center; gap: 0.85rem;">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=120&q=80" alt="Terra Backpack" style="width: 46px; height: 46px; border-radius: 8px; object-fit: cover;" />
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main);">Terra Everyday</div>
+              <div style="font-size: 0.78rem; font-weight: 800; color: var(--accent-primary);">₹8,999</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Trust / Service Feature Strip (4 columns desktop, 2x2 tablet, 1 mobile) -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <h4 class="trust-title">Fast Shipping</h4>
+            <p class="trust-sub">Complimentary on eligible orders over ₹2,999</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="trust-title">Secure Checkout</h4>
+            <p class="trust-sub">256-bit encrypted private payments</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="trust-title">Easy Returns</h4>
+            <p class="trust-sub">30-day effortless return guarantee</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="trust-title">Dedicated Support</h4>
+            <p class="trust-sub">Concierge team available 7 days a week</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Shop by Category (Circular / softly rounded containers with hover zoom) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-subtitle">Categorical Curation</span>
+          <h2 class="section-title">Shop by Category</h2>
+        </div>
+        <a href="shop.html" class="view-all-link">
+          Explore All Categories
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="category-grid">
+        <a href="shop.html?category=Electronics" class="category-card">
+          <div class="category-img-box">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Electronics" />
+          </div>
+          <span class="category-name">Electronics</span>
+        </a>
+
+        <a href="shop.html?category=Fashion" class="category-card">
+          <div class="category-img-box">
+            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=400&q=80" alt="Fashion" />
+          </div>
+          <span class="category-name">Fashion</span>
+        </a>
+
+        <a href="shop.html?category=Home%20%26%20Living" class="category-card">
+          <div class="category-img-box">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=400&q=80" alt="Home & Living" />
+          </div>
+          <span class="category-name">Home &amp; Living</span>
+        </a>
+
+        <a href="shop.html?category=Beauty" class="category-card">
+          <div class="category-img-box">
+            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=400&q=80" alt="Beauty" />
+          </div>
+          <span class="category-name">Beauty</span>
+        </a>
+
+        <a href="shop.html?category=Sports" class="category-card">
+          <div class="category-img-box">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=400&q=80" alt="Sports" />
+          </div>
+          <span class="category-name">Sports &amp; Living</span>
+        </a>
+
+        <a href="shop.html?category=Accessories" class="category-card">
+          <div class="category-img-box">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80" alt="Accessories" />
+          </div>
+          <span class="category-name">Accessories</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Best Sellers Section (Dynamic JS grid) -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-subtitle">Customer Favorites</span>
+          <h2 class="section-title">Best-Selling Pieces</h2>
+          <p class="section-desc">Our community's most-cherished selections, crafted with exceptional enduring quality and purposeful utility.</p>
+        </div>
+        <a href="shop.html?filter=bestseller" class="view-all-link">
+          View All Best Sellers
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <div id="bestsellers-grid" class="product-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Special Offer / Promotional Banner (Warm cream, editorial luxury-commerce) -->
+  <section class="section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="promo-content">
+          <div class="promo-tag">Limited Seasonal Collection</div>
+          <h2 class="promo-title">Refresh Your Everyday &mdash; Save Up to 40%</h2>
+          <p class="promo-desc">
+            Explore our curated seasonal capsule featuring acoustic noise-canceling headphones, organic cotton layerings, and handcrafted stoneware for your home.
+          </p>
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <a href="shop.html?filter=sale" class="btn btn-primary btn-lg">Shop the Offer</a>
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">Use Code: <strong>SAVE15</strong></span>
+          </div>
+        </div>
+        <div class="promo-img-wrap">
+          <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80" alt="Seasonal Essentials" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. New Arrivals / Featured Products (Filter tabs without page reload) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" style="align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <span class="section-subtitle">Freshly Introduced</span>
+          <h2 class="section-title">New Arrivals</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" id="arrival-tabs">
+          <button class="filter-tab active" data-category="All">All</button>
+          <button class="filter-tab" data-category="Fashion">Fashion</button>
+          <button class="filter-tab" data-category="Electronics">Electronics</button>
+          <button class="filter-tab" data-category="Home & Living">Home</button>
+          <button class="filter-tab" data-category="Beauty">Beauty</button>
+          <button class="filter-tab" data-category="Sports">Sports</button>
+        </div>
+      </div>
+
+      <div id="new-arrivals-grid" class="product-grid">
+        <!-- Rendered dynamically with filter transitions -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Why Choose Us Section (4 pillars with minimal icons) -->
+  <section class="section section-soft-green">
+    <div class="container">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 3.5rem auto;">
+        <span class="section-subtitle">The DesiVora Philosophy</span>
+        <h2 class="section-title">Why Mindful Living Chooses Us</h2>
+        <p style="margin-top: 0.5rem;">We prioritize authentic materiality, ethical production transparency, and zero-compromise aesthetics.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
+        
+        <div style="background: #FFFFFF; padding: 2.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+          <div style="width: 50px; height: 50px; background-color: var(--bg-soft-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-primary); margin-bottom: 1.25rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Quality You Can Trust</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">Every item undergoes strict durability testing and material safety audits before joining our permanent archive.</p>
+        </div>
+
+        <div style="background: #FFFFFF; padding: 2.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+          <div style="width: 50px; height: 50px; background-color: var(--bg-soft-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-primary); margin-bottom: 1.25rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Sustainable Sourcing</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">Crafted with GOTS certified organic fibers, Mediterranean cork, and recyclable low-impact packaging.</p>
+        </div>
+
+        <div style="background: #FFFFFF; padding: 2.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+          <div style="width: 50px; height: 50px; background-color: var(--bg-soft-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-primary); margin-bottom: 1.25rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8l-8 8"></path><path d="M8 8l8 8"></path></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Zero Middlemen Markups</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">Direct artisan-to-door relationships ensure genuine luxury specifications without traditional boutique markups.</p>
+        </div>
+
+        <div style="background: #FFFFFF; padding: 2.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+          <div style="width: 50px; height: 50px; background-color: var(--bg-soft-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--accent-primary); margin-bottom: 1.25rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Customer-First Care</h3>
+          <p style="font-size: 0.9rem; line-height: 1.6;">30-day effortless test returns, proactive replacement policies, and human concierge agents ready to assist.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Customer Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">
+        <span class="section-subtitle">Verified Experiences</span>
+        <h2 class="section-title">Words From Our Collectors</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        
+        <div class="testimonial-card">
+          <div>
+            <div style="color: #E6A23C; margin-bottom: 1rem; display: flex; gap: 2px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">
+              &ldquo;The Solace headphones have transformed my workday. The acoustic clarity is warm and fatigue-free, and the brushed aluminum feels exquisite in the hands.&rdquo;
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Camilla V." class="author-avatar" />
+            <div>
+              <div class="author-name">Camilla V.</div>
+              <div class="author-verified">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer &bull; Solace Headphones
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div style="color: #E6A23C; margin-bottom: 1rem; display: flex; gap: 2px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">
+              &ldquo;The Terra backpack has accompanied me across 6 countries now. Weatherproof, exceptionally comfortable on the shoulders, and looks effortlessly refined.&rdquo;
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus K." class="author-avatar" />
+            <div>
+              <div class="author-name">Marcus K.</div>
+              <div class="author-verified">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer &bull; Terra Backpack
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div style="color: #E6A23C; margin-bottom: 1rem; display: flex; gap: 2px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#E6A23C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">
+              &ldquo;Unboxing my ceramic pour-over set felt like receiving a gallery piece. DesiVora proves that daily rituals can be elevated with quiet intention.&rdquo;
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Evelyn S." class="author-avatar" />
+            <div>
+              <div class="author-name">Evelyn S.</div>
+              <div class="author-verified">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified Buyer &bull; Ceramic Set
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Newsletter Subscription -->
+  <section class="section" style="padding-top: 1rem; padding-bottom: 4rem;">
+    <div class="container">
+      <div class="newsletter-section">
+        <h2>Get First Access</h2>
+        <p>New arrivals, seasonal private invitations, and curated editorial reads delivered straight to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <span class="brand-name">DesiVora</span>
+            <span class="brand-tagline">Living &bull; Studio</span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.6; max-width: 280px; margin-bottom: 1.5rem;">
+            Mindful everyday living and intentional goods crafted for those who value quiet luxury and organic harmony.
+          </p>
+          <div style="display: flex; gap: 1rem; color: var(--text-muted);">
+            <a href="#" aria-label="Instagram" style="color: var(--text-main);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" aria-label="Pinterest" style="color: var(--text-main);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></a>
+            <a href="#" aria-label="Twitter / X" style="color: var(--text-main);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16m0-16L4 20"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Shop Links -->
+        <div class="footer-col">
+          <h4>Collection</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Goods</a></li>
+            <li><a href="shop.html?filter=bestseller">Best Sellers</a></li>
+            <li><a href="shop.html?filter=new">New Arrivals</a></li>
+            <li><a href="shop.html?filter=sale">Seasonal Archive</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Concierge Contact</a></li>
+            <li><a href="contact.html#shipping">Shipping &amp; Delivery</a></li>
+            <li><a href="contact.html#returns">30-Day Returns</a></li>
+            <li><a href="account.html">Track Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4>DesiVora Studio</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#sustainability">Sustainability</a></li>
+            <li><a href="about.html#materials">Material Archive</a></li>
+            <li><a href="contact.html">Press Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter small -->
+        <div class="footer-col footer-col-subscribe">
+          <h4>The DesiVora Note</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Receive private invitations, designer notes, and seasonal releases.</p>
+          <form class="newsletter-form" style="display: flex; gap: 0.5rem; max-width: 100%;">
+            <input type="email" placeholder="Your email" required style="padding: 0.65rem 1rem; border-radius: 99px; border: 1px solid var(--border-light); font-size: 0.85rem; flex-grow: 1; outline: none; background: #FFF;" />
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 DesiVora Living &amp; Studio Inc. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sustainability Report</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHARED COMPONENTS: Slide-out Cart Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+  <aside id="cart-drawer" class="side-drawer" aria-label="Shopping Bag Drawer">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <h3 style="font-size: 1.15rem; font-weight: 700;">Shopping Bag</h3>
+      </div>
+      <button class="drawer-close-btn icon-btn" aria-label="Close Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="cart-drawer-items">
+      <!-- Items dynamically populated via cart.js -->
+    </div>
+    <div class="drawer-footer" id="cart-drawer-footer">
+      <!-- Checkout buttons populated via cart.js -->
+    </div>
+  </aside>
+
+  <!-- SHARED COMPONENTS: Mobile Navigation Drawer -->
+  <aside id="mobile-menu-drawer" class="side-drawer" style="left: 0; right: auto; transform: translateX(-100%);" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-name">DesiVora</span>
+      </a>
+      <button class="drawer-close-btn icon-btn" aria-label="Close Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem; padding-top: 1rem;">
+        <li><a href="index.html" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 700; color: var(--text-main);">Home</a></li>
+        <li><a href="shop.html" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 700; color: var(--text-main);">Shop All Products</a></li>
+        <li><a href="shop.html?category=Electronics" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">Electronics</a></li>
+        <li><a href="shop.html?category=Fashion" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">Fashion &amp; Apparel</a></li>
+        <li><a href="shop.html?category=Home%20%26%20Living" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">Home &amp; Stoneware</a></li>
+        <li><a href="shop.html?category=Beauty" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">Beauty &amp; Fragrance</a></li>
+        <li><a href="shop.html?category=Sports" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">Movement &amp; Wellness</a></li>
+        <li><a href="wishlist.html" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">My Wishlist</a></li>
+        <li><a href="about.html" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">About DesiVora</a></li>
+        <li><a href="contact.html" class="mobile-nav-link" style="font-size: 1.05rem; color: var(--text-muted);">Concierge Contact</a></li>
+      </ul>
+      <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-light);">
+        <a href="login.html" class="btn btn-secondary btn-block" style="margin-bottom: 0.75rem;">Account Sign In</a>
+        <a href="register.html" class="btn btn-primary btn-block">Join Collector Circle</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SHARED COMPONENTS: Search Modal Overlay -->
+  <div id="search-modal" style="position: fixed; inset: 0; background: rgba(23, 26, 23, 0.7); backdrop-filter: blur(8px); z-index: 2000; display: none; align-items: flex-start; justify-content: center; padding: clamp(1rem, 5vw, 4rem) 1rem;" role="dialog" aria-modal="true">
+    <div style="background: #FFFFFF; width: 100%; max-width: 680px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--border-light);">
+      <div style="display: flex; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-light); gap: 1rem;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" placeholder="Search curated goods, headphones, backpack, ceramics..." style="width: 100%; border: none; outline: none; font-size: 1.1rem; color: var(--text-main);" />
+        <button id="search-modal-close" style="color: var(--text-muted); padding: 4px;" aria-label="Close Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div id="search-modal-results" style="padding: 1.5rem; max-height: 480px; overflow-y: auto;">
+        <div style="text-align: center; padding: 2rem 1rem; color: var(--text-muted); font-size: 0.9rem;">
+          Type at least 2 characters to search across products, materials, or categories...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #search-modal.active { display: flex !important; }
+    #mobile-menu-drawer.active { transform: translateX(0) !important; }
+  </style>
+
+  <!-- Application Scripts -->
+  <script type="module" src="js/app.js"></script>
+  <script type="module">
+    import { fetchProducts, createProductCardHTML, bindProductCardEvents, renderSkeletons } from './js/products.js';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const bestsellersGrid = document.getElementById('bestsellers-grid');
+      const newArrivalsGrid = document.getElementById('new-arrivals-grid');
+
+      renderSkeletons(bestsellersGrid, 4);
+      renderSkeletons(newArrivalsGrid, 4);
+
+      // Load Best Sellers
+      const bestsellers = await fetchProducts({ bestseller: 'true', limit: 4 });
+      if (bestsellersGrid && bestsellers.length) {
+        bestsellersGrid.innerHTML = bestsellers.map(p => createProductCardHTML(p)).join('');
+        bindProductCardEvents(bestsellersGrid);
+      }
+
+      // Load Initial New Arrivals
+      let currentCategory = 'All';
+      async function loadArrivals(category) {
+        renderSkeletons(newArrivalsGrid, 4);
+        const params = { limit: 4 };
+        if (category !== 'All') params.category = category;
+        const arrivals = await fetchProducts(params);
+        if (newArrivalsGrid) {
+          if (arrivals.length) {
+            newArrivalsGrid.innerHTML = arrivals.map(p => createProductCardHTML(p)).join('');
+            bindProductCardEvents(newArrivalsGrid);
+          } else {
+            newArrivalsGrid.innerHTML = `
+              <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                <p style="color: var(--text-muted);">No products found in this category.</p>
+              </div>
+            `;
+          }
+        }
+      }
+
+      loadArrivals('All');
+
+      // Category filter tabs on homepage
+      const tabs = document.querySelectorAll('#arrival-tabs .filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const category = tab.getAttribute('data-category');
+          loadArrivals(category);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "DesiVora — Mindful Living & Curated Goods",
+  "description": "A premium modern lifestyle e-commerce store crafted with HTML5, CSS3, vanilla JavaScript, Express.js and MongoDB in Indian Rupees (INR).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
